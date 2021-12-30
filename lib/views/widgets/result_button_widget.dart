@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../calculator_change_notifier.dart';
-import '../saved_functions_page.dart';
 import 'package:provider/provider.dart';
 
 class ResultButton extends StatelessWidget {
