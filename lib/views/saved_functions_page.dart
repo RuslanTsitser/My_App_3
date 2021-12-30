@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/src/provider.dart';
-import 'calculator_change_notifier.dart';
+import 'package:provider/provider.dart';
+import '../calculator_change_notifier.dart';
 
 class SavedFunctions extends StatelessWidget {
   const SavedFunctions({
@@ -9,6 +9,7 @@ class SavedFunctions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final c = context.read<CalculatorChangeNotifier>();
     return Scaffold(
       appBar: AppBar(
         title: Text('Saved functions'),
@@ -16,7 +17,7 @@ class SavedFunctions extends StatelessWidget {
       body: Form(
         child: Center(
           child: Text(
-            '${context.read<CalculatorChangeNotifier>().inputField}=${context.read<CalculatorChangeNotifier>().result}',
+            '${c.inputField}=${c.result}',
             style: TextStyle(fontSize: 20),
           ),
         ),
